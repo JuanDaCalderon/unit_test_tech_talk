@@ -1,0 +1,26 @@
+{
+  "name": "unit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}*"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 75,
+        "statements": 75
+      }
+    }
+  }
+}
