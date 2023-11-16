@@ -2,8 +2,8 @@ function sum(a, b) {
   return a + b;
 }
 
-function resta(a, b) {
+function sub(a, b) {
   return a - b;
 }
 
-module.exports = { sum, resta };
+module.exports = { sum, sub };
