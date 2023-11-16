@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --watchAll"
+    "test": "jest --verbose",
+    "test:coverage": "jest --coverage --verbose"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "jest": "^29.7.0"
-  },
   "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}*"
     ],
@@ -22,5 +27,12 @@
         "statements": 75
       }
     }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@jest/globals": "^29.7.0",
+    "jest": "^29.7.0"
   }
 }
