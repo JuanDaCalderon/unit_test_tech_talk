@@ -1,8 +1,8 @@
-import { Calculator } from "../../src/01_calculator/calculator";
+import { AngryCalculator } from "../../src/01_calculator/angryCalculator";
 
-describe('Calculate the basic operations of a calculator', () => {
+describe('Calculate the basic operations of an angry calculator (it have some conditions in order to do the operations)', () => {
   test("Multiply 7 * 8 to equal 56", () => {
-    const calculator = new Calculator();
+    const calculator = new AngryCalculator();
 
     const result = calculator.multiply(7, 8);
 
@@ -10,7 +10,7 @@ describe('Calculate the basic operations of a calculator', () => {
   });
 
   test("Divide 8 / 4 to equal 2", () => {
-    const calculator = new Calculator();
+    const calculator = new AngryCalculator();
 
     const result = calculator.divide(8, 4);
 
@@ -18,7 +18,7 @@ describe('Calculate the basic operations of a calculator', () => {
   });
 
   test("adds 1 + 2 to equal 3", () => {
-    const calculator = new Calculator();
+    const calculator = new AngryCalculator();
 
     const result = calculator.add(1, 2);
 
@@ -26,7 +26,7 @@ describe('Calculate the basic operations of a calculator', () => {
   });
 
   test("subtract 2 - 1 to equal 1", () => {
-    const calculator = new Calculator();
+    const calculator = new AngryCalculator();
 
     const result = calculator.sub(2, 1);
 
@@ -34,7 +34,7 @@ describe('Calculate the basic operations of a calculator', () => {
   });
 
   test("Get the last answer operation of the calculator", () => {
-    const calculator = new Calculator();
+    const calculator = new AngryCalculator();
     calculator.multiply(6, 7);
     calculator.sub(34, 5);
     calculator.divide(665, 7);

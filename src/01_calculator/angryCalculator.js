@@ -1,60 +1,64 @@
 /* 
-  CA-01 calculator: multiply feature
+  AC-01 The angry calculator: Multiply feature
   - As a user I want to multiply two numbers
     to obtain the addition of a same number as
     many times as indicated by another number
 
   Acceptance criteria: 
-  - The application should be able to receibe two any numbers
-  - The application should be able to return the result of the operation
-  - If the result of the multiplication is greater than 99999 or less than 99999, it should return infinity and -infinity respectively.
+  - The application can only multiply integers following: (-9999 < x < 9999)
+  - The application can only return the result of a multiplication in natural numbers including zero (x >= 0)
+  - The largest number that multiplication can return is 9999, if the result of multiplication is greater than this number it will return infinity
+  - If the result of a multiplication is negative, it must return the absolute of it
 */
 
 /* 
-  CA-02 calculator: Divide feature
+  AC-02 The angry calculator: Divide feature
   - As a user I want to divide two numbers
     to separate a total into equal parts
 
   Acceptance criteria: 
-  - The application should be able to receibe two any numbers
-  - The application should be able to return the result of the operation
-  - If the application receibe 0 as divider it should return 'Math Error'
-  - If the result is a float number, it must be approximated to the nearest integer.
+  - The application can only receibe as dividend even integer numbers and as divisor any integer number
+  - The application can only return the result of the operation in integer numbers following: (-9999 < x < 9999)
+  - If the result of the operation is greater than 9999 or less than 9999, it should return infinity and -infinity respectively.
+  - If the result is a float number, it must be approximated to the nearest integer below.
 */
 
 /* 
-  CA-03 calculator: Add feature
+  AC-03 calculator: Add feature
   - As a user I want to Add two numbers
     to combine them to obtain a total amount.
 
   Acceptance criteria: 
-  - The application should be able to receibe two any numbers
-  - The application should be able to return the result of the operation
-  - If the result of the add is greater than 9999 or less than 9999, it should return infinity and -infinity respectively.
+  - The application can only add floats numbers following: (-9999.0 <= x <= 9999.0)
+  - The application should be able to return the result of the operation only as a float number
+  - If the result of the add is greater than 9999.0 or less than 9999.0, it should return infinity and -infinity respectively.
 */
 
 /* 
-  CA-04 calculator: Subtraction feature
+  AC-04 calculator: Subtraction feature
   - As a user I want to Substract two numbers
     to remove one quantity from another.
 
   Acceptance criteria: 
-  - The application should be able to receibe two any numbers
-  - The application should be able to return the result of the operation
-  - If the result of the subtraction is greater than 9999 or less than 9999, it should return infinity and -infinity respectively.
+  - The application can only substract floats numbers following: (-9999.0 < x < 9999.0)
+  - The application should be able to return the result of the operation only as a float positive number (x >= 0)
+  - If the result of the subtraction is greater than 9999.0 or less than 9999.0, it should return infinity and -infinity respectively.
+  - If the result of the substraction is negative, it must return the absolute of it
 */
 
 /* 
-  CA-05 calculator: historical feature
+  AC-05 calculator: historical feature
   - As a user I want to get the last operation and first
     operation of the calculator to have a quick way to get them
 
   Acceptance criteria: 
   - The application should be able to receibe LA (Last answer) to get the last operation of the calculator
+  - If the last answer is 0 it must return the last answer different than 0
   - The application should be able to receibe FA (First answer) to get the First operation of the calculator
+  - If the first answer is 0 it must return the first answer different than 0
 */
 
-export class Calculator {
+export class AngryCalculator {
 
   historical = []
 
@@ -117,5 +121,3 @@ export class Calculator {
     }
   }
 }
-
-
