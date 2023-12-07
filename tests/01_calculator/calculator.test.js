@@ -18,10 +18,11 @@ describe('Calculate the basic operations of a calculator', () => {
   });
 
   test("adds 1 + 2 to equal 3", () => {
+    // Arrange
     const calculator = new Calculator();
-
+    // Act
     const result = calculator.add(1, 2);
-
+    // Assert
     expect(result).toBe(3);
   });
 
